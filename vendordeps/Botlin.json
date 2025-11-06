@@ -1,0 +1,25 @@
+{
+    "fileName": "Botlin.json",
+    "name": "Botlin",
+    "version": "0.1.0",
+    "frcYear": "2025",
+    "uuid": "be9dba85-3c58-45e6-b376-070f1102e122",
+    "mavenUrls": [
+        "https://repo1.maven.org/maven2/"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/Kotlin-for-FRC/Botlin/refs/heads/main/Botlin.json",
+    "javaDependencies": [
+        {
+            "groupId": "gay.zharel.botlin",
+            "artifactId": "botlin",
+            "version": "0.1.0"
+        },
+        {
+            "groupId": "gay.zharel.botlin",
+            "artifactId": "units",
+            "version": "0.1.0"
+        }
+    ],
+    "jniDependencies": [],
+    "cppDependencies": []
+}

@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj2.command.button.CommandJoystick
 import gay.zharel.botlin.commands.CoroutineCommand
 import gay.zharel.botlin.units.inch
 import gay.zharel.botlin.units.inches
+import gay.zharel.botlin.units.kilo
+import gay.zharel.botlin.units.kilograms
 import org.ironmaple.simulation.SimulatedArena
 import org.ironmaple.simulation.drivesims.COTS
 import org.ironmaple.simulation.drivesims.SwerveDriveSimulation
@@ -34,6 +36,7 @@ import team.vaevictis.subsystems.swerve.ioa.sim.SwerveModuleSimIOA
 object RobotContainer {
     val swerveSimConfig: DriveTrainSimulationConfig = DriveTrainSimulationConfig.Default()
         .withGyro(COTS.ofNav2X())
+        .withRobotMass(55.kilograms)
         .withSwerveModule(COTS.ofMAXSwerve(
             DCMotor.getNEO(1),
             DCMotor.getNeo550(1),
@@ -89,7 +92,7 @@ object RobotContainer {
         swerveDrive.defaultCommand = Commands.run({
             swerveDrive.drive(
                 -leftJoystick.x,
-                -leftJoystick.y,
+                leftJoystick.y,
                 -rightJoystick.x
             )
         }, swerveDrive)

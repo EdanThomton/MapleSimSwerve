@@ -12,33 +12,33 @@ val swerveDriveConfig = SwerveConfig(
 
     SwerveModuleConfig(
         4, 3,
-        0.5, 0.0, 0.0,
-        1.75, 0.0, 0.05,
-        0.0, 0.0789, 0.0,
+        1.0, 0.0, 0.0,
+        2.0, 0.0, 0.001,
+        0.001, 0.0789, 0.0,
         0.0,
         Translation2d(WHEEL_POS, WHEEL_POS)
     ),
     SwerveModuleConfig(
         6, 5,
-        0.5, 0.0, 0.0,
-        1.75, 0.0, 0.05,
-        0.0, 0.0789, 0.0,
+        1.0, 0.0, 0.0,
+        2.0, 0.0, 0.001,
+        0.001, 0.0789, 0.0,
         0.0,
         Translation2d(WHEEL_POS, -WHEEL_POS)
     ),
     SwerveModuleConfig(
         2, 1,
-        0.5, 0.0, 0.0,
-        1.75, 0.0, 0.05,
-        0.0, 0.0789, 0.0,
+        1.0, 0.0, 0.0,
+        2.0, 0.0, 0.001,
+        0.001, 0.0789, 0.0,
         0.0,
         Translation2d(-WHEEL_POS, WHEEL_POS)
     ),
     SwerveModuleConfig(
         8, 7,
-        0.5, 0.0, 0.0,
-        1.75, 0.0, 0.05,
-        0.0, 0.0789, 0.0,
+        1.0, 0.0, 0.0,
+        2.0, 0.0, 0.001,
+        0.001, 0.0789, 0.0,
         0.0,
         Translation2d(-WHEEL_POS, -WHEEL_POS)
     ),

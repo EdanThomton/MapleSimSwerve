@@ -59,11 +59,11 @@ class SwerveModuleSimIOA(
         }
 
     override fun simulationPeriodic() {
-        val driveAngularVelocity = swerveModuleSim.driveWheelFinalSpeed.to(RadiansPerSecond)
+        val driveAngularVelocity = swerveModuleSim.driveWheelFinalSpeed.to(RadiansPerSecond) * WheelConstants.WHEEL_RADIUS_METERS
         val steerAbsoluteFacing = swerveModuleSim.steerAbsoluteFacing.radians
 
-        val driveAppliedVolts = driveFFVolts + driveController.calculate(driveAngularVelocity)
-        val steerAppliedVolts = steerController.calculate(steerAbsoluteFacing)
+        val driveAppliedVolts = 6.0 * (driveController.calculate(driveAngularVelocity) + driveFFVolts)
+        val steerAppliedVolts = 6.0 * steerController.calculate(steerAbsoluteFacing)
 
         driveMotor.requestVoltage(driveAppliedVolts.volts)
         steerMotor.requestVoltage(steerAppliedVolts.volts)
